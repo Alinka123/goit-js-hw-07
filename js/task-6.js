@@ -36,5 +36,4 @@ controls.addEventListener('click', (event) => {
   } else if (event.target.dataset.destroy) {
     destroyBoxes();
   }
-  
 });
