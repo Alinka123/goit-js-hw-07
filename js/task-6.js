@@ -1,5 +1,5 @@
-const controls = document.getElementById('controls');
-const boxesContainer = document.getElementById('boxes');
+const controls = document.querySelector('#controls');
+const boxesContainer = document.querySelector('#boxes');
 
 function getRandomHexColor() {
   return `#${Math.floor(Math.random() * 16777215)
@@ -22,9 +22,10 @@ function createBoxes(amount) {
   boxesContainer.append(...boxes);
 }
 
-function destroyBoxes() {
+ function destroyBoxes() {
   boxesContainer.innerHTML = '';
 }
+
 
 controls.addEventListener('click', (event) => {
   if (event.target.dataset.create) {
@@ -36,4 +37,5 @@ controls.addEventListener('click', (event) => {
   } else if (event.target.dataset.destroy) {
     destroyBoxes();
   }
+ 
 });
